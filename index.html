@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="3D/FC.css">
+    <link rel="stylesheet" type="text/css" href="3D/style.css">
+    <script src="./3D/js/jquery-3.1.0.min.js"></script>
+    <script src="./3D/js/jqueryPhoto.js" type="text/javascript"></script>
+</head>
+<style>
+    @import url(./CesiumUnminified/Widgets/widgets.css);
+    html,body,#cesiumContainer{
+        width: 100%;
+        height: 100%;
+        margin:0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #cesiumContainer{
+        position:relative;
+    }
+</style>
+<script data-main="App" src="libs/require.js"></script>
+
+<body>
+<button class="show">bottom3</button>
+<div id="cesiumContainer">
+    <div class="threeBtn">
+        <button class="btn1" style="cursor: pointer;">报警1</button>
+        <button class="btn2">报警2</button>
+        <button class="btn3">报警3</button>
+    </div>
+    <div class="more">
+        <div class="moretitle">
+            <span>杭州XX股份有限公司</span><span style="color:#fff">(企业信息)</span>
+            <img src="./3D/img/close.png" alt="" class="close3">
+        </div>
+        <div class="morelist">
+            <p class="synopsis"><span>企业简介：</span><span class="qyjj">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管
+                安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管安全生产管理机构名称安全生产管理机构名。
+                称安全生产管理机构名称安全生产管</span>
+            </p>
+            <div class="morelistL">
+                <ul>
+                    <li><span class="listTitle">企业名称：</span><span class="qymc">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管</span></li>
+                    <li><span class="listTitle">成立时间：</span><span class="clsj">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管</span></li>
+                    <li><span class="listTitle">工商代码：</span><span class="gsdm"></span></li>
+                    <li><span class="listTitle">注册地址：</span><span class="zcdz"></span></li>
+                    <li><span class="listTitle">经营地址：</span><span class="jydz"></span></li>
+                    <li><span class="listTitle">法人：</span><span class="fr"></span></li>
+                    <li><span class="listTitle">法人联系方式：</span><span class="frph"></span></li>
+                    <li><span class="listTitle">安全负责人：</span><span class="fzr"></span></li>
+                    <li><span class="listTitle">负责人电话：</span><span class="fzrph"></span></li>
+                    <li><span class="listTitle">注册资金（万元）：</span><span class="zczj"></span></li>
+                    <li><span class="listTitle">管辖组织：</span><span class="orgid"></span></li>
+                    <li><span class="listTitle">管辖组织名：</span><span class="orgName"></span></li>
+                    <li><span class="listTitle">企业证照：</span><span class="qyzz"></span></li>
+                    <li><span class="listTitle">企业地图经度：</span><span class="jing"></span></li>
+                    <li><span class="listTitle">企业地图纬度：</span><span class="wei"></span></li>
+                    <li><span class="listTitle">经济类型 字典 comStyle：</span><span class="economy"></span></li>
+                    <li><span class="listTitle">经济类型中文：</span><span class="economyStr"></span></li>
+                    <li><span class="listTitle">邮政编码：</span><span class="meanCode"></span></li>
+                    <li><span class="listTitle">工商营业生产范围：</span><span class="aicScope"></span></li>
+                    <li><span class="listTitle">生产场所地址：</span><span class="produceAddress"></span></li>
+                    <li><span class="listTitle">企业规模：</span><span class="comSize"></span></li>
+                    <li><span class="listTitle">行业门类：</span><span class="industry"></span></li>
+                    <li><span class="listTitle">大类：</span><span class="bigCategory"></span></li>
+                    <li><span class="listTitle">小类：</span><span class="subCategory"></span></li>
+                    <li><span class="listTitle">中类：</span><span class="middleCategory"></span></li>
+                    <li><span class="listTitle">行业代码：</span><span class="industryCode"></span></li>
+                    <li><span class="listTitle">行业分类 ：</span><span class="industryType"></span></li>
+                    <li><span class="listTitle">安全生产管理机构名称：</span><span class="safetyOrgName"></span></li>
+                    <li><span class="listTitle">安全生产管理机构人数：</span><span class="safetyOrgPerson"></span></li>
+                    <li><span class="listTitle">安全机构负责人：</span><span class="safetyOrgLeger"></span></li>
+                    <li><span class="listTitle">安全机构负责人电话：</span><span class="safetyOrgLegerPho"></span></li>
+                    <li><span class="listTitle">安全机构负责人移动电话：</span><span class="safetyOrgLegerTel"></span></li>
+                    <li><span class="listTitle">安全机构邮箱：</span><span class="safetyOrgEmail"></span></li>
+                    <li><span class="listTitle">职工人数：</span><span class="workNumber"></span></li>
+                    <li><span class="listTitle">剧毒化学品人员人数：</span><span class="toxicPerNumber"></span></li>
+                    <li><span class="listTitle">危险作业人员人数：</span><span class="dangerousPerNumber"></span></li>
+                    <li><span class="listTitle">特种人员人数：</span><span class="specialNumber"></span></li>
+                    <li><span class="listTitle">安全生产化标准级：</span><span class="safetyLevel"></span></li>
+                    <li><span class="listTitle">应急服务电话：</span><span class="emergencyPho"></span></li>
+                    <li><span class="listTitle">安全值班电话：</span><span class="safetyDutyPho"></span></li>
+                    <li><span class="listTitle">是否进口危险化学品：</span><span class="isDangerous"></span></li>
+                    <li><span class="listTitle">进口企业资质证明名称：</span><span class="enterpriseName"></span></li>
+                    <li><span class="listTitle">进口企业资质证明编号：</span><span class="enterpriseCode"></span></li>
+                    <!--<li><span class="listTitle">企业简介 ：</span><span class="qyjj">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全</span></li>-->
+                </ul>
+            </div>
+            <div class="morelistR">
+                <ul>
+                    <li><span class="listTitle">主要产品：</span><span class="mainScale">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称</span></li>
+                    <li><span class="listTitle">危险化学品种类及名称：</span><span class="dangerousNaSty">安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称安全生产管理机构名称</span></li>
+                    <li><span class="listTitle">重大危险源一级个数：</span><span class="hazardOneNum"></span></li>
+                    <li><span class="listTitle">重大危险源一级名称：</span><span class="hazardOneName"></span></li>
+                    <li><span class="listTitle">重大危险源2级个数：</span><span class="hazardToNum"></span></li>
+                    <li><span class="listTitle">重大危险源2级名称：</span><span class="hazardToName"></span></li>
+                    <li><span class="listTitle">重大危险源3级个数：</span><span class="hazardThreeNum"></span></li>
+                    <li><span class="listTitle">重大危险源3级名称：</span><span class="hazardThreeName"></span></li>
+                    <li><span class="listTitle">重大危险源4级个数：</span><span class="hazardFourNum"></span></li>
+                    <li><span class="listTitle">重大危险源4级名称：</span><span class="hazardFourName"></span></li>
+                    <li><span class="listTitle">重大危险源总数 ：</span><span class="hazardAllNum"></span></li>
+                    <li><span class="listTitle">剧毒化学品几种：</span><span class="toxicNumber"></span></li>
+                    <li><span class="listTitle">剧毒化学品名称：</span><span class="toxicName"></span></li>
+                    <li><span class="listTitle">重点监管危险化学品种数：</span><span class="dangerousNumber"></span></li>
+                    <li><span class="listTitle">重点监管危险化学品名称：</span><span class="dangerousName"></span></li>
+                    <li><span class="listTitle">易制爆化学品几种：</span><span class="explosiveNumber"></span></li>
+                    <li><span class="listTitle">易制爆化学品名称：</span><span class="explosiveName"></span></li>
+                    <li><span class="listTitle">重点监管的危险化工工艺种数：</span><span class="hazardousNumber"></span></li>
+                    <li><span class="listTitle">重点监管的危险化工工艺名称：</span><span class="hazardousName"></span></li>
+                    <li><span class="listTitle">危险化学品库房面积：</span><span class="dangerousArea"></span></li>
+                    <li><span class="listTitle">容器总容积：</span><span class="packArea"></span></li>
+                    <li><span class="listTitle">边界外情况：</span><span class="boundaryCondition"></span></li>
+                    <li><span class="listTitle">主要生产工艺描述：</span><span class="mainProducts"></span></li>
+                    <li><span class="listTitle">重点设备（危险工艺设备）：</span><span class="mainDevice"></span></li>
+                    <li><span class="listTitle">包含危化品：</span><span class="containDangerous"></span></li>
+                    <li><span class="listTitle">生产产品：</span><span class="produce"></span></li>
+                    <li><span class="listTitle">副产品 ：</span><span class="byProduce"></span></li>
+                    <li><span class="listTitle">溶剂回收：</span><span class="solvent"></span></li>
+                    <li><span class="listTitle">投产时间：</span><span class="completionTime"></span></li>
+                    <li><span class="listTitle">技改时间：</span><span class="technicalTime"></span></li>
+                    <li><span class="listTitle">车间火灾时救援方式：</span><span class="workshopFire"></span></li>
+                    <li><span class="listTitle">仓库 防火分区情况：</span><span class="deFireproof"></span></li>
+                    <li><span class="listTitle">仓库 储存物料名称：</span><span class="deStorageName"></span></li>
+                    <li><span class="listTitle">仓库 数量：</span><span class="deStorageNumber"></span></li>
+                    <li><span class="listTitle"> 仓库 火险等级：</span><span class="deFireLevel"></span></li>
+                    <li><span class="listTitle">火险等级字典：</span><span class="deFireLevelStr"></span></li>
+                    <li><span class="listTitle">仓库火灾时救援方式：</span><span class="depotFire"></span></li>
+                    <li><span class="listTitle">罐区防火区情况：</span><span class="taFireproof"></span></li>
+                    <li><span class="listTitle">罐区 储存物料名称：</span><span class="taStorageName"></span>
+                    <li><span class="listTitle">罐区 储存物料数量：</span><span class="taStorageNumber"></span></li>
+                    <li><span class="listTitle">罐区 储存物料火险等级：</span><span class="taFireLevel"></span></li>
+                    <li><span class="listTitle">罐区火灾时救援方式：</span><span class="tankFire"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="top-right">
+        <img src="./3D/img/Group 11.png" alt="">
+        <div class="weatherbox">
+            <ul>
+                <li><input name="Fruit" type="checkbox" value="" style="margin-right: 10;margin-left:-17px;"/><span>关闭所有</span></li>
+                <li><input name="Fruit" type="checkbox" value="" />一级企业<img src="./3D/img/p1.png"></li>
+                <li><input name="Fruit" type="checkbox" value="" />二级企业<img src="./3D/img/p2.png"></li>
+                <li><input name="Fruit" type="checkbox" value="" />三级企业<img src="./3D/img/p3.png"></li>
+                <li><input name="Fruit" type="checkbox" value="" />四级企业<img src="./3D/img/p4.png"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tq">
+        <div id="weather">
+            <ul>
+                <li class="header">
+                    <img src="./3D/img/sun.png" alt="">
+                    <span style="color:#fff">杭州</span>
+                </li>
+                <li>
+                    <ul class="weather">
+                        <li style="padding-top:10px;">26°</li>
+                        <li>温度33%</li>
+                        <li style="border-radius: 0 0 120px 120px ;height:60px;background-color: #252B39;">东北风4级</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="top-center">
+        <div class="top-center">
+            <div class="top-center-img"><img src="./3D/img/logo.png" alt=""></div>
+            <span>智慧消防安检信息化平台</span>
+        </div>
+    </div>
+    <div class="leftPart">
+        <!--<div class="search">-->
+            <!--<img src="./3D/img/search1.png" alt="" class="search1">-->
+            <!--<input class="searchbar" placeholder="请输入设备名称">-->
+            <!--<img src="./3D/img/search2.png" alt="" class="search2">-->
+        <!--</div>-->
+        <div class="twoIcon">
+            <img src="./3D/img/search1.png" alt="" class="search1">
+            <img src="./3D/img/Due north.png" alt="" class="Due">
+            <img src="./3D/img/map.png" alt="" class="map">
+            <img src="./3D/img/Exclamatory%20mark.png" alt="" class="Exclamatory">
+            <img src="./3D/img/four-leaf%20clover.png" alt="" class="four-leaf">
+        </div>
+        <!--<div class="explain">-->
+        <!--<div class="explain-title">-->
+        <!--浙江化工厂——实验仓库-->
+        <!--</div>-->
+        <!--<p style="padding:15px 0px 10px 10%">建筑面积：2400平方米</p>-->
+        <!--<p style="padding:0px 0px 10px 10%">考勤人数：1484人</p>-->
+        <!--</div>-->
+    </div>
+    <div class="bandi">
+        <!--底部1-->
+        <div class="bottom1 bot1">
+            <div class="left">
+                <div class="leftlogo">
+                    <div>
+                        <div style="height:50px;width:100px;" class="tupian"><img src="./3D/img/menu-enterprise.png"></div>
+                        <p style="color:#fff;">企业信息</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="mulu">
+                    <div class="mulu1" style="padding:50px 30px 50px 0">
+                        <p style="color:#fff">杭州XX股份有限公司</p>
+                    </div>
+                    <div class="mulu1">
+                        <ul class="ul1">
+                            <li>企业名称：<span class="qymc"></span></li>
+                            <li>成立时间：<span class="clsj"></span></li>
+                            <li>法人：<span class="fr"></span></li>
+                            <li>企业规模：<span class="comSize"></span></li>
+                            <li>安全生产管理机构人数：<span class="safetyOrgPerson"></span></li>
+                        </ul>
+                    </div>
+                    <div class="mulu1">
+                        <ul class="ul1">
+                            <li>安全机构负责人：<span class="safetyOrgLeger"></span></li>
+                            <li>安全机构负责人移动电话：<span class="safetyOrgLegerTel"></span></li>
+                            <li>剧毒化学品人员人数：<span class="toxicPerNumber"></span></li>
+                            <li>危险作业人员人数：<span class="dangerousPerNumber"></span></li>
+                            <li>重大危险源一级名称：<span class="hazardOneName"></span></li>
+                        </ul>
+                    </div>
+                    <div class="mulu1">
+                        <ul class="ul1">
+                            <li>重大危险源二级名称：<span class="hazardToName"></span></li>
+                            <li>投产时间：<span class="completionTime"></span></li>
+                            <li>技改时间：<span class="technicalTime"></span></li>
+                            <li>仓库数量：<span class="deStorageNumber"></span></li>
+                            <li>罐区储存物料数量：<span class="taStorageNumber"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="more">
+                <button class="morebtn"><img src="./3D/img/more.png" alt="">更多</button>
+            </div>
+        </div>
+        <!--//底部菜单2-->
+        <div class="bottom">
+            <div class="icon"><img src="./3D/img/Group1.png"></div>
+            <div class="left">
+                <div class="leftlogo">
+                    <div>
+                        <div style="height:50px;width:100px;" class="tupian"><img src="./3D/img/map.png"></div>
+                        <p style="color:#fff;">地图导览1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <!-- 水平轮播 -->
+                <div class="mod18">
+                    <div id="prevbar" class="prevbar"><span id="prev" class="btn prev"></span></div>
+                    <div id="nextbar" class="nextbar"><span id="next" class="btn next"></span></div>
+                    <div id="listBox" class="listBox">
+                        <ul class="cf">
+                            <li><img src="./3D/img/1.png" alt=""><p>海创园-二期-A区</p></li>
+                            <li><img src="./3D/img/2.png" alt=""><p>海创园-二期-B区</p></li>
+                            <li><img src="./3D/img/3.png" alt=""><p>海创园-一期-A区</p></li>
+                            <li><img src="./3D/img/4.png" alt=""><p>海创园-一期-B区</p></li>
+                            <li><img src="./3D/img/5.png" alt=""><p>海创园-一期-C区</p></li>
+                            <li><img src="./3D/img/1.png" alt=""><p>海创园-二期-A区</p></li>
+                            <li><img src="./3D/img/2.png" alt=""><p>海创园-二期-B区</p></li>
+                            <li><img src="./3D/img/3.png" alt=""><p>海创园-一期-C区</p></li>
+                            <li><img src="./3D/img/4.png" alt=""><p>海创园-一期-C区</p></li>
+                            <li><img src="./3D/img/5.png" alt=""><p>海创园-一期-C区</p></li>
+                            <li><img src="./3D/img/1.png" alt=""><p>海创园-二期-A区</p></li>
+                            <li><img src="./3D/img/2.png" alt=""><p>海创园-二期-B区</p></li>
+                            <li><img src="./3D/img/3.png" alt=""><p>海创园-一期-C区</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部3 -->
+        <div class="bottom3">
+            <div class="icon"><img src="./3D/img/Group1.png"></div>
+            <div class="car"><img src="./3D/img/bj.png"></div>
+            <div class="centers">
+                <div class="ul">
+                    <ul>
+                        <li><a href="">报警信息</a></li>
+                        <li><a href="">企业信息</a></li>
+                        <li><a href="">人员信息</a></li>
+                        <li><a href="">监控视频</a></li>
+                    </ul>
+                </div>
+                <div class="ul2 ">
+                    <ul>
+                        <li><a href=""><span>岗位人数：</span>：1200人</a></li>
+                        <li><a href=""><span>考勤人数：</span>1158人</a></li>
+                        <li><a href=""><span>建筑面积：</span>3000平方米</a></li>
+                        <li><a href=""><span>完工时间：</span>2014年9月</a></li>
+                    </ul>
+                </div>
+                <div class="ul2">
+                    <ul>
+                        <li><a href=""><span>类型：</span>机器车间</a></li>
+                        <li><a href=""><span>生产范围：</span>印刷用化学品</a></li>
+                        <li><a href=""><span>负责人：</span>张三丰15966249658 </a></li>
+                        <li><a href=""><span>负责人：</span>刘丽玲13949499393</a></li>
+                    </ul>
+                </div>
+                <div class="ul3">
+                    <div class="source"><span class="sources"><img src="./3D/img/ss.png">报警源</span><span class="see"><img src="./3D/img/hidden.png">隐藏</span></div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>(1)烟感报警器01</td>
+                                <td>70%FT</td>
+                                <td>0m</td>
+                            </tr>
+                            <tr>
+                                <td>(2)烟感报警器02</td>
+                                <td>80.78%FT</td>
+                                <td>3m</td>
+                            </tr>
+                            <tr>
+                                <td>(3)温湿感01</td>
+                                <td>40°C 10%RH</td>
+                                <td>5m</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">(4)手动报警按钮01</td>
+                                <td>7m</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="ul4">
+                    <div class="source"><span class="sources"><img src="./3D/img/danger.png">危险源</span><span class="see"><img src="./3D/img/show.png">显示</span></div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>(1)可燃物1</td>
+                                <td>12m3</td>
+                                <td>12m</td>
+
+                            </tr>
+                            <tr>
+                                <td>(2)可燃物2</td>
+                                <td>56m3</td>
+                                <td>14m</td>
+                            </tr>
+                            <tr>
+                                <td>(3)可燃物3</td>
+                                <td>120m3</td>
+                                <td>16m</td>
+
+                            </tr>
+                            <tr>
+                                <td>(4)可燃物4</td>
+                                <td>3m3</td>
+                                <td>20m</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="r1"><img src="./3D/img/Group.png" alt=""></div>
+                <div class="r2"><div class="bar">></div></div>
+                <div class="r3">
+                    <div>
+                        <img src="./3D/img/dismissandtext.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="scrollVertical">
+    <span class="Top" ><img src="./3D/img/Top.png"></span>
+    <div class="bbb">
+        <ul>
+            <li>F5</li>
+            <li>F4</li>
+            <li>F3</li>
+            <li>F2</li>
+            <li>F1</li>
+            <li>B5</li>
+            <li>B4</li>
+            <li>B3</li>
+            <li>B2</li>
+            <li>B1</li>
+        </ul>
+    </div>
+    <span class="Bot" style="margin-top:22px;"><img src="./3D/img/Bot.png"></span>
+</div>
+<!--园区介绍弹窗-->
+<div class="Popup">
+    <div class="Popup-title">
+        <span class="introduce">园区介绍</span>
+        <img src="./3D/img/close.png" alt="" class="close">
+    </div>
+    <div class="Popup-text">
+        责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393责任人：刘丽玲 13949499393
+    </div>
+    <div id="btn">
+        <button class="btn1">
+            <img src="./3D/img/video.png" alt="">视频1
+        </button>
+        <button class="btn2">
+            <img src="./3D/img/video.png" alt="">视频2
+        </button>
+    </div>
+</div>
+<!--园区介绍视频弹窗-->
+<div id="videoPopup1">
+    <div class="videoPopup">
+        <div class="video-title"><img src="./3D/img/video.png" alt="">视频1</div>
+        <img src="./3D/img/close.png" alt="" class="close2">
+        <iframe id="vedio1" class="demo_videoFrameIframe" width="500px" height="252px" frameborder="0" scrolling="false" allowtransparency="true">
+        </iframe>
+    </div>
+</div>
+<div id="videoPopup2">
+    <div class="videoPopup">
+        <div class="video-title"><img src="./3D/img/video.png" alt="">视频1</div>
+        <img src="./3D/img/close.png" alt="" class="close2">
+        <iframe id="vedio2" class="demo_videoFrameIframe" width="500px" height="252px"frameborder="0" scrolling="false" allowtransparency="true">
+        </iframe>
+    </div>
+</div>
+<!--气泡弹窗-->
+<div id="tag">
+    <div class="tag">
+        <div class="mes">
+            <ul>
+                <li class="dangerousSource">重大危险源</li>
+                <li><a href="">危化品生产工艺企业</a></li>
+                <li><a href="">安全生厂许可企业</a></li>
+                <li><a href="">动态企业</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--行政执法-->
+<div class="Administration">
+    <img src="./3D/img/Administration.png" alt="">
+</div>
+<div class="Administration2">
+    <img src="./3D/img/Administration.png" alt="">
+    <span><a href="#">行政执法</a></span>
+</div>
+<!--右侧半圆盘-->
+<div class="semi">
+    <div><img src="./3D/img/equipment.png" alt="" class="pic2"></div>
+</div>
+<div class="semi-circle">
+    <img src="./3D/img/menu-enterprise.png" alt="" class="pic1">
+    <img src="./3D/img/equipment.png" alt="" class="pic2">
+    <img src="./3D/img/Video surveillance.png" alt="" class="pic3">
+    <div class="min-semi-circle"><span>企业信息</span></div>
+</div>
+<script>
+    /**
+     * 垂直数字滚动
+     * @type {*|jQuery|HTMLElement}
+     */
+    var $top=$("span.Top");
+    var $bot=$("span.Bot");
+
+    $top.click(function(){
+        $(".bbb li:first").insertBefore($(".bbb li:last"));
+        $(".scrollVertical ul").attr("style","top:0px;");
+        $(".scrollVertical ul").animate({top:'-=29'},300);
+
+    });
+    $bot.click(function(){
+        $(".bbb li:last").insertBefore($(".bbb li:first"));
+        $(".scrollVertical ul").attr("style","top:-29px;");
+        $(".scrollVertical ul").animate({top:'+=29'},300);
+    });
+    /**
+     * bottom3
+     */
+    $(".show").click(function(){
+        $(".bottom3").toggle();
+    })
+    /**
+     * 右侧半圆盘
+     */
+    $(".semi").click(function(){
+        $(this).css("display","none");
+        $(".semi-circle").css("display","block");
+        $(".min-semi-circle").css("display","block");
+    })
+    $(".min-semi-circle").click(function(){
+        $(".min-semi-circle").css("display","none");
+        $(".semi-circle").css("display","none");
+        $(".semi").css("display","block");
+    })
+    /**
+     * 园区简介弹窗
+     */
+    $(".Exclamatory").click(function(){
+        $(".Popup").toggle();
+    })
+    $(".btn1").click(function(){
+        $("#videoPopup1").css("display","block");
+        $(".Popup").css("display","none");
+        $("#vedio1").attr('src','http://116.62.48.233:8081/examples/videoTest2.html');
+    })
+    $(".btn2").click(function(){
+        $("#videoPopup2").css("display","block");
+        $(".Popup").css("display","none");
+        $("#vedio2").attr('src','http://116.62.48.233:8081/examples/videoTest2.html');
+    })
+    $(".close").click(function(){
+        $(".Popup").css("display","none");
+    })
+    $(".close2").click(function(){
+        $("#videoPopup1").css("display","none");
+        $("#videoPopup2").css("display","none");
+    })
+    /**
+     * 园区简介气泡弹窗
+     */
+    $(".four-leaf").mouseover(function(){
+        $("#tag").css("display","block");
+    })
+    $("#tag").mouseover(function(){
+        $(this).css("display","block");
+    })
+    $("#tag").mouseleave(function(){
+        $(this).css("display","none");
+    })
+    /**
+     * 右侧重大危险源
+     */
+    $(".dangerouSource").click(function(){
+        $(".weatherbox").toggle();
+        $(".threeBtn").css("display","none");
+    })
+    /**
+     * 右侧行政执法
+     */
+    $(".Administration").mouseover(function(){
+        $(".Administration2").css("display","block");
+
+    })
+    $(".Administration2").mouseleave(function(){
+        $(".Administration2").css("display","none");
+        $(".Administration").css("display","block");
+    })
+    /**
+     * 右侧半圆盘
+     */
+    $(".semi").click(function(){
+        $(this).css("display","none");
+        $(".semi-circle").css("display","block");
+    })
+    $(".min-semi-circle").click(function(){
+        $(".semi-circle").css("display","none");
+        $(".semi").css("display","block");
+    })
+    /**
+     * 天气下拉
+     */
+    $("#weather").mouseover(function(){
+//            $(this).addClass("border-radius");
+        $("#weather ul li ul").slideDown(500);
+    })
+    $("#weather").mouseleave(function(){
+        $(this).remove("border-radius");
+        $("#weather ul li ul").css("display","none");
+    })
+    /**
+     * 更多按钮
+     */
+    $("#more button").click(function(){
+        $(".more").toggle();
+    })
+    $(".close3").click(function(){
+        $(".more").css("display","none");
+    })
+</script>
+<script>
+    /**
+     * 底部动画
+     * @type {boolean}
+     */
+    var b = true;
+    var oldPosition = $(".bottom").css('bottom');
+    $(function(){
+        $(".icon").click(function(){
+            if(b){
+                $(this).css( "transform","rotate(180deg)");
+                distance = 0;
+            }else{
+                distance = oldPosition;
+                $(this).css( "transform","rotate(360deg)");
+            }
+            $('.bottom').stop().animate({
+                bottom:distance
+            },500);
+            b = !b;
+        })
+        // 点击地图出底部菜单
+        $(".map").click(function(){
+            if(b){
+                distance = 0;
+                $(".icon").css( "transform","rotate(180deg)");
+            }else{
+                distance = oldPosition;
+                $(".icon").css( "transform","rotate(360deg)");
+            }
+            $('.bottom').stop().animate({
+                bottom:distance
+            },500);
+            b = !b;
+        })
+    })
+</script>
+</body>
+</html>
