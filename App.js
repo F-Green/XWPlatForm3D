@@ -28,7 +28,7 @@ require([
 
             var xw3d = new XW3D('cesiumContainer');
 
-
+        console.log("aaa")
         }
 
         return App
