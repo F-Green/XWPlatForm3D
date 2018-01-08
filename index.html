@@ -180,10 +180,11 @@
         <!--</div>-->
         <div class="twoIcon">
             <img src="./3D/img/search1.png" alt="" class="search1">
-            <img src="./3D/img/Due north.png" alt="" class="Due">
+            <!--<img src="./3D/img/Due north.png" alt="" class="Due">-->
             <img src="./3D/img/map.png" alt="" class="map">
             <img src="./3D/img/Exclamatory%20mark.png" alt="" class="Exclamatory">
             <img src="./3D/img/four-leaf%20clover.png" alt="" class="four-leaf">
+            <img src="./3D/img/videosetting.png" alt="" class="Due">
         </div>
         <!--<div class="explain">-->
         <!--<div class="explain-title">-->
@@ -242,7 +243,7 @@
                 <button class="morebtn"><img src="./3D/img/more.png" alt="">更多</button>
             </div>
         </div>
-        <!--//底部菜单2-->
+        <!--底部菜单2-->
         <div class="bottom">
             <div class="icon"><img src="./3D/img/Group1.png"></div>
             <div class="left">
@@ -442,6 +443,13 @@
         </div>
     </div>
 </div>
+<!--视频设置菜单-->
+<div id="videosetting" class="videosetting">
+    <ul class="building1_box">
+        <li class="companyType">重大危险源</li>
+        <li class="companyType">危化品生产工艺企业</li>
+    </ul>
+</div>
 <!--行政执法-->
 <div class="Administration">
     <img src="./3D/img/Administration.png" alt="">
@@ -539,6 +547,15 @@
     $(".dangerouSource").click(function(){
         $(".weatherbox").toggle();
         $(".threeBtn").css("display","none");
+    })
+    /**
+     * 视频设置
+     */
+    $(".Due").click(function(){
+        $("#videosetting").toggle();
+    })
+    $("#videosetting").mouseleave(function(){
+        $(this).css("display","none");
     })
     /**
      * 右侧行政执法
