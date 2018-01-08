@@ -1175,3 +1175,15 @@ td{
     z-index:111111;
     left:0;
 }
+#videosetting{
+    position: absolute;
+    z-index:50;
+    top: 286px;
+    left: 73px;
+    display: none;
+    width:180px;
+    background: rgba(37,43,57,0.60);
+    height:auto;
+    overflow: hidden;
+    border-radius: 3px;
+}
